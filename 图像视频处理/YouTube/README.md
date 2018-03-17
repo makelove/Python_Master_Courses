@@ -10,6 +10,7 @@
     
 - 使用
     - 有很多选项
+        - youtube-dl --help
     - 常用
         - 直接下载
             - youtube-dl  https://www.youtube.com/watch?v=RJknrSi3eUQ
