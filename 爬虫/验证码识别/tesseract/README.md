@@ -2,6 +2,9 @@
 - 开源的OCR识别引擎，初期Tesseract引擎由HP实验室研发，后来贡献给了开源软件业，后经由Google进行改进，消除bug，优化，重新发布。
 - github:https://github.com/tesseract-ocr/tesseract
 
+
+- 视频教程：https://www.bilibili.com/video/av20894592/
+
 - 安装
     - macOS
         - brew install tesseract
