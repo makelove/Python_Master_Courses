@@ -12,4 +12,4 @@
     - pip install opencv-contrib-python
     
 - 验证
-    - python -c "import cv2;print(cv2.__version__,cv2.__doc__,cv2.__file__)"
+    - python -c "import cv2;print(cv2.\_\_version__,cv2.\_\_doc__,cv2.\_\_file__)"
