@@ -99,3 +99,15 @@ ENV/
 
 # mypy
 .mypy_cache/
+/.py3/
+.py2/bin/
+.py2/include/
+.py2/pip-selfcheck.json
+.py3/bin/
+.py3/include/
+.py3/pip-selfcheck.json
+.py3/share/
+"Python3.6/\347\272\277\347\250\213-\350\277\233\347\250\213-\345\215\217\347\250\213-\345\214\272\345\210\253/"
+
+/.py2/
+/Python3.6/test.py

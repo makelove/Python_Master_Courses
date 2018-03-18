@@ -1,6 +1,6 @@
 ##1-virtualenv虚拟环境安装
 
-- 视频：
+- 视频：https://www.bilibili.com/video/av20919692/
 
 - 什么是virtualenv？
     - python的虚拟环境，把你需要的工作环境与系统环境隔离，互不影响。
@@ -31,7 +31,7 @@ trusted-host=mirrors.aliyun.com
      
 -  virtualenv创建虚拟环境
     - python2.7
-        - virtualenv .py2
+        - virtualenv -p python2 .py2
     - python3.6
         - virtualenv -p python3 .py3 
     - 激活虚拟环境
