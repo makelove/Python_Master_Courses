@@ -1,5 +1,5 @@
 ## PythonAnyWhere
-- 视频：
+- 视频：https://www.bilibili.com/video/av20952208/
 
 - 参考
     - https://www.jianshu.com/p/1ca218994ad8
