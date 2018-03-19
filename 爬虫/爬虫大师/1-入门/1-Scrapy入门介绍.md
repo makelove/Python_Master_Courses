@@ -1,4 +1,5 @@
 ## Scrapy入门介绍
+- 视频：https://www.bilibili.com/video/av20960954/
 
 - 介绍
     - 官网https://scrapy.org/
