@@ -12,3 +12,8 @@
     - https://space.bilibili.com/180948619#/
 - 微信 打赏 
     - <img src="data/wechat_donate.jpg" width = "200" height = "200" alt="wechat_donate"  />    
+    
+    
+    
+- 
+- pip freeze > requirements.txt    
