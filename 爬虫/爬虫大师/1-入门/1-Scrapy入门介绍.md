@@ -135,5 +135,8 @@ class QuotesSpider(scrapy.Spider):
 
 - 学习建议
     - 看完Scrapy中文文档
-    - 购买一部Scrapy图书
+    - 购买一本Scrapy图书
     - 实战经验，多练习写代码，尝试爬取不同类型的网站，如电商，豆瓣，网贷，大众点评，微博，微信
+    
+- 参考
+    - [Scrapy爬虫框架教程（一）-- Scrapy入门](https://zhuanlan.zhihu.com/p/24669128)
