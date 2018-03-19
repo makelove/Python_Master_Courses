@@ -1,6 +1,6 @@
 ## 选择器（Selectors）-提取数据的机制
 
-- 视频
+- 视频：https://www.bilibili.com/video/av20974346/
 - 文档
     - [选择器（Selectors）](https://oner-wv.gitbooks.io/scrapy_zh/content/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/%E9%80%89%E6%8B%A9%E5%99%A8.html)
 
