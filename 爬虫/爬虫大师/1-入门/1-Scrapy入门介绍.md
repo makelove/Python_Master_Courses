@@ -10,6 +10,10 @@
 - 中文文档
     - [Scrapy 1.3 文档](https://oner-wv.gitbooks.io/scrapy_zh/content/)
     - 1.0 文档 https://scrapy-chs.readthedocs.io/zh_CN/1.0/index.html
+- 图书
+    - [用Python写网络爬虫](https://item.jd.com/11963485.html)
+    - [精通Python爬虫框架Scrapy](https://item.jd.com/12292223.html)
+    - 国内作者：[精通Scrapy网络爬虫](https://item.jd.com/12207223.html)
     
 - Scrapy 是用纯 Python 编写的，并且依赖于一些关键的 Python 包（其中包括）：
     - lxml ，一个高效的XML和HTML解析器
@@ -127,3 +131,7 @@ class QuotesSpider(scrapy.Spider):
 .             ..            quotes-1.html quotes-2.html scrapy.cfg    tutorial
 ```
 
+- 学习建议
+    - 看完Scrapy中文文档
+    - 购买一部Scrapy图书
+    - 实战经验，多练习写代码，尝试爬取不同类型的网站，如电商，豆瓣，网贷，大众点评，微博，微信
