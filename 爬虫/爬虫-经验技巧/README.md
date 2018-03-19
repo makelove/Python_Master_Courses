@@ -8,3 +8,10 @@
         - 最简单的方法
             - 修改 project的settings.py 
             - 添加 FEED_EXPORT_ENCODING = 'utf-8'
+            
+- 在pycharm里调试，断点，单步调试
+    - 在工程根目录添加main.py
+```python
+from scrapy import cmdline
+cmdline.execute("scrapy crawl tutorial".split())
+```    
