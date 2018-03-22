@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 import scrapy
+from .. import items
+from time import time
 
 class QuotesSpider(scrapy.Spider):
     name = "quotes"
@@ -19,3 +21,10 @@ class QuotesSpider(scrapy.Spider):
             f.write(response.body)
         self.log('Saved file %s' % filename)
 
+    def parse_product(self,response):
+        item=items.Product()
+        item['name'] = '某个产品'
+        item['price'] = 43.343
+        item['stock'] = 32
+        item['last_updated'] = str(int(time()))
+        yield item
