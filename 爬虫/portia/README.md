@@ -1,4 +1,7 @@
 ## Portia 可视化的爬虫规则编写工具
+
+视频：https://www.bilibili.com/video/av21087352/
+
 - 官网
     - https://scrapinghub.com/portia
     - 源代码：https://github.com/scrapinghub/portia
@@ -14,7 +17,7 @@
         - 不要打开http://127.0.0.1:8000/
         - 入口是 http://127.0.0.1:9001/
 ```bash
-docker run -i -t -v portia:/app/data/projects:rw -p 9001:9001 scrapinghub/portia
+docker run -i -t -v /Users/play/Study/2018/portia:/app/data/projects:rw -p 9001:9001 scrapinghub/portia
 
 Unable to find image 'scrapinghub/portia:latest' locally
 latest: Pulling from scrapinghub/portia
