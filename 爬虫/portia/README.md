@@ -10,7 +10,7 @@
     
 - 安装启动
     - 使用Docker
-        - docker run -i -t -v portia:/app/data/projects:rw -p 9001:9001 scrapinghub/portia
+        - docker run -i -t -v /Users/play/Study/2018/portia:/app/data/projects:rw -p 9001:9001 scrapinghub/portia
         - 不要打开http://127.0.0.1:8000/
         - 入口是 http://127.0.0.1:9001/
 ```bash
