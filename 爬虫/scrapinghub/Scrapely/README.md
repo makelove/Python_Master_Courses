@@ -1,8 +1,10 @@
 ## Scrapely
+- 视频：https://www.bilibili.com/video/av21107710/
 - github主页：https://github.com/scrapy/scrapely
 
+
 - Scrapely是一个可以从HTML网页中提取结构数据的库。给定一些网页例子和需要提取的数据，scrapely会对类似网站构造一个通用解析器。
-    - Scractly提取基于实例基础学习算法[1]， 并且使用解析器树，从包装诱导的分层方法[2]中启发，将匹配项组合成复杂对象（它支持嵌套和重复对象）。
+    - Scrapely提取基于实例基础学习算法[1]， 并且使用解析器树，从包装诱导的分层方法[2]中启发，将匹配项组合成复杂对象（它支持嵌套和重复对象）。
 
 - 安装
     - pip install scrapely
