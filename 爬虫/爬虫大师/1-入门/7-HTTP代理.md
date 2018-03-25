@@ -1,5 +1,5 @@
 ## HTTP IP 代理
-- 视频
+- 视频：https://www.bilibili.com/video/av21215308/
 
 - 为什么要使用HTTP代理？
     - 有时候因为网络太慢，使用代理提高爬取速度
