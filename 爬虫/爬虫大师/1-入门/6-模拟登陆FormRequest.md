@@ -1,6 +1,6 @@
 ## 6-模拟登陆FormRequest
 
-- 视频:
+- 视频:https://www.bilibili.com/video/av21201800/
 
 - 文档
     - https://doc.scrapy.org/en/latest/topics/request-response.html?highlight=FormRequest#formrequest-objects
@@ -11,3 +11,5 @@
   
 - 爬虫
   - tutorial/tutorial/spiders/quote_login.py
+  
+- scrapy runspider quote_login.py -o quote-login.csv  
