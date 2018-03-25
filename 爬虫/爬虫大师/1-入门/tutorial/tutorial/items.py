@@ -18,3 +18,12 @@ class Product(scrapy.Item):
     price = scrapy.Field()
     stock = scrapy.Field()
     last_updated = scrapy.Field(serializer=str)
+
+
+class BooksItem(scrapy.Item):
+    name = scrapy.Field()
+    title = scrapy.Field()
+
+
+class ForeignBookItem(BooksItem):
+    translator = scrapy.Field()

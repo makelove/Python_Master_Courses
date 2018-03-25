@@ -2,8 +2,11 @@
 import scrapy, json
 from scrapy import Request
 
+from scrapy_redis.spiders import RedisSpider
 
-class IpProxySpider(scrapy.Spider):
+
+# class IpProxySpider(scrapy.Spider):
+class IpProxySpider(RedisSpider):
     name = 'ip_proxy'
     allowed_domains = ['www.kuaidaili.com']
     start_urls = ['https://www.kuaidaili.com/free/inha/%s/']
