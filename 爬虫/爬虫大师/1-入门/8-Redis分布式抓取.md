@@ -42,4 +42,5 @@
         - class BooksSpider(RedisSpider):
         - def start_requests(self):
              -yield scrapy.Request(self.start_urls[0])
-    
+    - 或者在Redis cli中 
+        - LPUSH 'spider_name:start_urls' 'http://roll.sohu.com/it/'
