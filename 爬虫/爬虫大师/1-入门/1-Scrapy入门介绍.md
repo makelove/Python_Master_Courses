@@ -2,7 +2,8 @@
 - 视频：https://www.bilibili.com/video/av20960954/
 
 - 介绍
-    - 官网https://scrapy.org/
+    - 官网 https://scrapy.org/
+    - 官方文档 https://docs.scrapy.org/en/latest/
     - Scrapy是一个为了爬取网站数据，提取结构性数据而编写的应用框架,用于抓取web站点并从页面中提取结构化的数据。其最初是为了 页面抓取 (更确切来说, 网络抓取 )所设计的， 也可以应用在获取API所返回的数据(例如 Amazon Associates Web Services ) 或者通用的网络爬虫。
     - 命名：Scrap是碎片；残余物的意思，也可以说是搜刮
 - Scrapy框架图
