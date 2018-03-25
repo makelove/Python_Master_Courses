@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
+
 from scrapy_redis.spiders import RedisSpider
 from ..items import BooksItem
 
@@ -7,11 +8,15 @@ from ..items import BooksItem
 # class BooksSpider(scrapy.Spider):
 class BooksSpider(RedisSpider):
     name = 'books'
-    allowed_domains = ['books.toscrape.com']
+    # allowed_domains = ['books.toscrape.com']
     start_urls = ['http://books.toscrape.com/']
 
-    def __init__(self):
-        self.counter = 0
+    def start_requests(self):
+        yield scrapy.Request(self.start_urls[0])
+
+    # def __init__(self):
+    #     self.counter = 0
+
 
     def parse(self, response):
         # if self.counter > 2:

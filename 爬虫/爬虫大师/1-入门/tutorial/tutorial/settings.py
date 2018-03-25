@@ -28,7 +28,7 @@ ROBOTSTXT_OBEY = False
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 5
+DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
 # CONCURRENT_REQUESTS_PER_DOMAIN = 16
 # CONCURRENT_REQUESTS_PER_IP = 16
@@ -99,8 +99,9 @@ SCHEDULER = "scrapy_redis.scheduler.Scheduler"
 DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
 
 # Specify the host and port to use when connecting to Redis (optional).可选
-#REDIS_HOST = 'localhost'
-#REDIS_PORT = 6379
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
 
 # Don't cleanup redis queues, allows to pause/resume crawls.
 #SCHEDULER_PERSIST = True
+SCHEDULER_PERSIST = False
