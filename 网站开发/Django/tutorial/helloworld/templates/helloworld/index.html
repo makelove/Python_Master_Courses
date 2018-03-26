@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{{title}}</title>
 </head>
 <body>
-<h1>hello,world</h1>
+<h1>{{title}}</h1>
+<div>
+<ul>考试成绩：
+        <li>姓名：{{ name }}</li>
+        <li>年龄：{{ age }}</li>
+        <li>班级：{{ class }}</li>
+        <div>成绩
+        <p>
+            {% for scro in scores %}
+                {{ scro }}
+            {% endfor %}
+        </p>
+        </div>
+    </ul>
+</div>
 </body>
 </html>
