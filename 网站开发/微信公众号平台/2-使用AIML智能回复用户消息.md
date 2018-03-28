@@ -10,6 +10,7 @@
     - https://www.pandorabots.com/pandora/pics/wallaceaimltutorial.html
     - 下载英文语料
         - https://code.google.com/archive/p/aiml-en-us-foundation-alice/#!
+        - pip install aiml 
 ```python
 def load_aiml():
     cur_dir = os.getcwd()
