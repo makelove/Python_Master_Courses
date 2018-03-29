@@ -16,3 +16,14 @@ import os, sys
 lib_path = os.path.abspath(os.path.join('..'))
 sys.path.append(lib_path)
 ```
+- 总结 ,我们实际上可以结合这两种方法：
+```python
+if __name__ == '__main__':
+    if __package__ is None:
+        import sys
+        from os import path
+        sys.path.append( <path to the package> )
+       from libs.some_lib import something
+    else:
+        from ..libs.some_lib import something
+```
