@@ -15,3 +15,8 @@
 from scrapy import cmdline
 cmdline.execute("scrapy crawl tutorial".split())
 ```    
+
+
+- 使用Firebug需要安装Firefox 39.0b7.dmg
+    - [新版本的Firefox浏览器不支持firebug JS调试的问题](https://blog.csdn.net/m0_37871052/article/details/74579034)
+        - https://archive.mozilla.org/pub/firefox/releases/39.0b2/win64/zh-CN/
