@@ -5,6 +5,11 @@
         - Windows x86-64 executable installer，		for AMD64/EM64T/x64, not Itanium processors
         - 自带pip
         - 配置pip镜像
+            - https://my.oschina.net/u/3009151/blog/863570
+            - 在windows文件管理器中,输入 %APPDATA%
+            - 会定位到一个新的目录下，在该目录下新建pip文件夹，然后到pip文件夹里面去新建个pip.ini文件
+
+
         
 - 安装pyqt5
     - pip3 install PyQt5
