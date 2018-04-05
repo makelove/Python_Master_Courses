@@ -15,10 +15,13 @@
     - 只有窗口程序
         - pyinstaller -w happy_not.py
     
-- 选项    
+- 重要选项    
     - -D, --one-dir打包成一个文件夹，默认
     - -F, --one-file打包成一个exe文件
     - -p DIR, --paths DIR添加路径，一般用来添加程序所用到的包的所在位置
     - -c, --console, --nowindowed无视窗，程序后台运行
     - -w, --windowed, --noconsole 提供程序视窗，程序没有命令行输出，默认
     - -i <FILE.ico or FILE.exe,ID or FILE.icns>, --icon <FILE.ico or FILE.exe,ID or FILE.icns>添加icon图标
+    - -d, --debug 生成debug模式的exe文件
+    - -v FILE, --version=FILE 加入版本信息文件
+    - -o DIR, --out=DIR 设置spec文件输出的目录，默认在PyInstaller同目录
