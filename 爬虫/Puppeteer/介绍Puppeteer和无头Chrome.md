@@ -1,4 +1,7 @@
 ## 介绍Puppeteer和无头Chrome
+
+- 视频：https://www.bilibili.com/video/av21679024/
+
 - https://dev.to/mohamed3on/an-introduction-to-puppeteer-and-headless-chrome
 
 Headless Chrome是Chrome 59（Linux和Mac）和Chrome 60（Windows）中新发布的功能。它允许以编程方式测试网站而无需启动浏览器窗口，从而使自动化测试变得更加容易，从而让您更有信心地在不破坏任何内容的情况下更改您的应用。
@@ -19,3 +22,7 @@ Puppeteer的一个很好的用例是为你的UI自动测试，截取它的截图
 总而言之，Puppeteer是一个软件包，允许您以自动的方式编程处理网页，无论是截取网页截图，还是将其导出为PDF，或者单击按钮并填写表单，或者提取/刮取页面的内容供以后检查。它为您提供了一个非常强大的API，可让您在完整的浏览器中执行任何操作，而无需使用浏览器。
 如果您有兴趣并想了解更多关于无头Chrome的信息，请查看本文。
 如果你想看看如何使用木偶匠的例子，请点击这里。
+
+- 安装 
+    - npm install --save puppeteer
+    - npm install -g puppeteer
