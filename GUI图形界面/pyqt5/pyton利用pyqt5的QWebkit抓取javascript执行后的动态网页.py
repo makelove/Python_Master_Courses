@@ -13,7 +13,8 @@ import sys
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtWebKitWidgets import *
-from lxml
+# from lxml import etree
+from lxml.etree import HTML
 
 #use QtWebkit to get the final webpage
 class WebRender(QWebPage):
@@ -31,4 +32,4 @@ class WebRender(QWebPage):
 url=''
 r = WebRender(url)
 html = r.frame.toHtml()
-page = etree.HTML(html.encode('utf-8'))
+page = HTML(html.encode('utf-8'))
