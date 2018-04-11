@@ -1,10 +1,22 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta charset="utf-8" />
+    <!--<script type="text/javascript" src="qwebchannel.js"></script>-->
+    <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
+    <title>QWebChannel测试</title>
+    <script>
+        window.onload = function () {
+            new QWebChannel(qt.webChannelTransport, function (channel) {
+                window.pyjs = channel.objects.pyjs;
+                alert(pyjs.myHello())
+            });
+        }
+    </script>
 </head>
 <body>
-$END$
+<h1>QWebChannel测试</h1>
+<div><button onclick="pyjs.myHello('jkfd',function(rs){console.log(rs);});">callback</button></div>
 </body>
 </html>
