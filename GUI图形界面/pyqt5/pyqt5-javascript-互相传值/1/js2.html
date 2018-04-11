@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- js页面引入-->
+    <!--<script src="qwebchannel.js"></script>-->
+    <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
+    <script>
+        window.onload = function () {
+            new QWebChannel(qt.webChannelTransport, function (channel) {
+                window.pyjs = channel.objects.pyjs;
+                //py call js
+                pyjs.result.connect(function (message) {
+//                    alert("connectCallResult:" + message);
+                    console.log("connectCallResult:" + message);
+                })
+
+                //js call py
+                var callResult = pyjs.myHello("js call py", function (returnValue) {
+//                    alert(returnValue);
+                    console.log(returnValue);
+                });
+            });
+        }
+
+        function show() {
+            alert("show");
+            return "show";
+        }
+    </script>
+</head>
+<body>
+<h1>测试</h1>
+<div id="test1">test1
+    <button onclick="show()">show</button>
+    <button onclick="call_python()">call python</button>
+</div>
+</body>
+</html>
