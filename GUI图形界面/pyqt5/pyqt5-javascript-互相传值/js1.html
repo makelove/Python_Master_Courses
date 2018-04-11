@@ -5,6 +5,57 @@
     <title>Title</title>
 </head>
 <body>
-
+<h1>测试</h1>
+<div id="test1">test1
+<button onclick="show()">show</button>
+<button onclick="call_python()">call python</button>
+</div>
 </body>
+<!-- js页面引入-->
+<!--<script src="qwebchannel.js"></script>-->
+<script src="qrc:///qtwebchannel/qwebchannel.js"></script>
+<!--<script src="api.js"></script>-->
+<!--<script src="msgutils.js"></script>-->
+
+<script type="text/javascript">
+    function call_python() {
+        console.log('call_python');
+        handler.myHello("loowj");
+    }
+    /*
+    window.onload = function () {
+        new QWebChannel(qt.webChannelTransport, function (channel) {
+            window.handler = channel.objects.handler;
+            //py call js
+            handler.result.connect(function (message) {
+                alert("connectCallResult:" + message);
+            })
+
+            //js call py
+            var callResult = handler.myHello("loowj", function (returnValue) {
+                alert(returnValue);
+            });
+        });
+    }
+    */
+    function show() {
+        alert("js show");
+        return "show";
+    }
+</script>
+<script type="text/javascript">
+    var jshelper;
+    var webChannel =new QWebChannel( qt.webChannelTransport, function(channel) {
+      window.handler = channel.objects.handler;
+      jshelper = channel.objects.handler;
+//      console.log(channel.objects)
+  });
+    /*
+    document.addEventListener("DOMContentLoaded", function () {
+        new QWebChannel(qt.webChannelTransport, function (channel) {
+            window.handler = channel.objects.handler;
+        });
+    });
+    */
+</script>
 </html>
