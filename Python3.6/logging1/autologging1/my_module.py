@@ -16,16 +16,16 @@ logging.basicConfig(
      format="%(levelname)s:%(name)s:%(funcName)s:%(message)s")
 
 @logged
-@traced
 class MyClass:
+    @traced
     def my_method(self, arg, keyword=None):
         print('start')
         self.__log.info("my message")
         return "%s and %s" % (arg, keyword)
 
-MyClass().my_method('hello','world')
+# MyClass().my_method('hello','world')
 
-# if __name__ == '__main__':
-#     myc=MyClass()
-#     rt=myc.my_method('hello','world')
-#     print(rt)
+if __name__ == '__main__':
+    myc=MyClass()
+    rt=myc.my_method('hello','world')
+    print(rt)
