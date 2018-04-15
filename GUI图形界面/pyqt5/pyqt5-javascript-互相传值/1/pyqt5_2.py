@@ -29,8 +29,8 @@ class CallHandler(QObject):
 
 # 3
 def _loadFinish(self, *args, **kwargs):
-    view.page().runJavaScript("window.show()")
-    print("load finish")
+    ret=view.page().runJavaScript("window.show()")
+    print("load finish:",ret)
 
 
 

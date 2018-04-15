@@ -17,16 +17,17 @@
                 })
 
                 //js call py
-                var callResult = pyjs.myHello("js call py", function (returnValue) {
+                var callResult = pyjs.myHello("pyjs.myHello", function (returnValue) {
 //                    alert(returnValue);
-                    console.log(returnValue);
+                    console.log('returnValue:',returnValue);
                 });
+                console.log('callResult:',callResult);
             });
         }
 
         function show() {
-            alert("show");
-            return "show";
+            alert("show js");
+            return "show return";
         }
     </script>
 </head>

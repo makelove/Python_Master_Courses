@@ -1,5 +1,7 @@
 ## pyqt5-HTML5调试-Chrome DevTools
 
+- 视频：https://www.bilibili.com/video/av22124178/
+
 - https://doc.qt.io/qt-5.10/qtwebengine-debugging.html
     - Qt WebEngine模块提供了Web开发工具，可以轻松检查和调试任何Web内容的布局和性能问题。
     - 开发人员工具可以使用基于Chromium或Qt WebEngine的浏览器（如Chrome浏览器）作为本地网页进行访问。
