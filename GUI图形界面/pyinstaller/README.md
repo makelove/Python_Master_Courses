@@ -25,3 +25,14 @@
     - -d, --debug 生成debug模式的exe文件
     - -v FILE, --version=FILE 加入版本信息文件
     - -o DIR, --out=DIR 设置spec文件输出的目录，默认在PyInstaller同目录
+    
+- 经验
+    - py程序中使用了第三方库的打包方式
+        - 在打包之前务必找到第三方库的包，把包复制到到跟myfile.py同目录下，然后再使用以上2种方式打包，否则会打包失败或者即使打包成功，程序也会闪退
+        - 例如使用BeautifulSoup解析xml
+            - from bs4 import BeautifulSoup
+            - so = BeautifulSoup(msg, 'xml')
+                - 使用了lxml模块,必须把C:\Users\play\AppData\Local\Programs\Python\Python36\Lib\site-packages\lxml文件夹复制到打包文件夹
+        - 另外一个方法是
+            - import lxml
+            - pyinstaller会自动引入
