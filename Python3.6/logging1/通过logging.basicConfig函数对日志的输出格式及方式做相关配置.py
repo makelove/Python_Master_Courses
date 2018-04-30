@@ -29,13 +29,24 @@ stream: 指定将日志的输出流，可以指定输出到sys.stderr,sys.stdout
 """
 
 import logging
+from datetime import datetime
 
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
-                    datefmt='%a, %d %b %Y %H:%M:%S',
-                    filename='myapp1.log',
-                    filemode='w')
+                    # datefmt='%a, %d %b %Y %H:%M:%S',
+                    # filename='myapp1.log',
+                    filename=datetime.now().strftime('myapp12-%Y_%m_%d.log'),
+                    # filemode='w')
+                    filemode='a')
 
-logging.debug('This is debug message')
-logging.info('This is info message')
-logging.warning('This is warning message')
+#
+console = logging.StreamHandler()
+console.setLevel(logging.INFO)
+formatter = logging.Formatter('%(name)-12s: %(levelname)-8s %(message)s')
+console.setFormatter(formatter)
+logging.getLogger('').addHandler(console)
+#
+
+logging.debug('1 This is debug message')
+logging.info('2 This is info message')
+logging.warning('3 This is warning message')

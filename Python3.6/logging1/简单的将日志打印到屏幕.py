@@ -18,6 +18,6 @@ CRITICAL > ERROR > WARNING > INFO > DEBUG > NOTSET，
 当然也可以自己定义日志级别。
 '''
 
-logging.debug('This is debug message')
-logging.info('This is info message')
-logging.warning('This is warning message')
+logging.debug("%s %s",'This is debug message','debug')
+logging.info("%s %s",'This is info message','info')
+logging.warning("%s %s",'This is warning message','warning')
