@@ -1,0 +1,17 @@
+2018-05-03 00:00:00,284 MyLogger     INFO     Line 3
+2018-05-03 00:00:03,289 MyLogger     INFO     Line 4
+2018-05-03 00:00:06,294 MyLogger     INFO     Line 0
+2018-05-03 00:00:09,297 MyLogger     INFO     Line 1
+2018-05-03 00:00:12,300 MyLogger     INFO     Line 2
+2018-05-03 00:00:15,305 MyLogger     INFO     Line 3
+2018-05-03 00:00:18,306 MyLogger     INFO     Line 4
+2018-05-03 00:00:21,312 MyLogger     INFO     Line 0
+2018-05-03 00:00:24,316 MyLogger     INFO     Line 1
+2018-05-03 00:00:27,319 MyLogger     INFO     Line 2
+2018-05-03 00:00:30,322 MyLogger     INFO     Line 3
+2018-05-03 00:00:33,326 MyLogger     INFO     Line 4
+2018-05-03 00:00:36,328 MyLogger     INFO     Line 0
+2018-05-03 00:00:39,333 MyLogger     INFO     Line 1
+2018-05-03 00:00:42,335 MyLogger     INFO     Line 2
+2018-05-03 00:00:45,340 MyLogger     INFO     Line 3
+2018-05-03 00:00:48,342 MyLogger     INFO     Line 4
