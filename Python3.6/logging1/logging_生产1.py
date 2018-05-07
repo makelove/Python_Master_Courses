@@ -11,7 +11,7 @@ logging_生产1.py:
 #配置日志
 import logging
 from datetime import datetime
-line_format='%(asctime)s %(funcName)s %(message)s'
+line_format='%(asctime)s %(funcName)s %(message)s\n'
 logging.basicConfig(level=logging.DEBUG,
                     format=line_format,
                     # datefmt="%H:%M:%S",
