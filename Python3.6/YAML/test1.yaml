@@ -1,0 +1,22 @@
+name: Tom Smith
+age: 37
+spouse:
+    name: Jane Smith
+    age: 25
+children:
+ - name: JimmyB Smith
+   age: 15
+ - name1: JennyG Smith
+   age1: 12
+
+#url
+url:
+  - 淘宝:
+    - http://item.taobao.com/item.htm?id=565608693996
+    - http://item.taobao.com/item.htm?id=568406965727
+  - 天猫:
+    - https://detail.tmall.com/item.htm?id=564332014156
+    - http://item.taobao.com/item.htm?id=559612504297
+  - 京东:
+    - http://item.jd.com/25412457653.html
+    - http://item.jd.com/12436555516.html
