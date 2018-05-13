@@ -1,6 +1,7 @@
 # YAML 
 
 - [yaml简介以及在python上的应用](http://angeloce.iteye.com/blog/385976)
+-[在python中使用Yaml](https://blog.csdn.net/Xiao_Qiang_/article/details/2891119)
 - [python中yaml配置文件模块的使用](https://www.jianshu.com/p/f21b9306a68d)
 
 YAML的可读性好。
