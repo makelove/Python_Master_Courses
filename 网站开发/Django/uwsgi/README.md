@@ -10,3 +10,5 @@
     - 测试
         - uwsgi --http :8001 --wsgi-file test_uwsgi.py
         - http://127.0.0.1:8001/
+    - 部署Flask 
+        - http://uwsgi-docs.readthedocs.io/en/latest/WSGIquickstart.html#deploying-flask
