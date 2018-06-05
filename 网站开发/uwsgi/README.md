@@ -2,6 +2,7 @@
 
 - 参考
     - 官方文档：http://uwsgi-docs.readthedocs.io/en/latest/WSGIquickstart.html
+        - http://uwsgi-docs.readthedocs.io/en/latest/WSGIquickstart.html#deploying-django
     - http://www.runoob.com/django/django-nginx-uwsgi.html
     
 - 步骤
