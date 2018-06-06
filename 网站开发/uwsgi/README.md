@@ -2,8 +2,10 @@
 
 - 参考
     - 官方文档：http://uwsgi-docs.readthedocs.io/en/latest/WSGIquickstart.html
+        - 中文 http://uwsgi-docs-zh.readthedocs.io/zh_CN/latest/tutorials/Django_and_nginx.html
         - http://uwsgi-docs.readthedocs.io/en/latest/WSGIquickstart.html#deploying-django
     - http://www.runoob.com/django/django-nginx-uwsgi.html
+    - [通过Nginx部署Django（基于ubuntu)](https://www.cnblogs.com/fnng/p/5268633.html)
     
 - 步骤
     - pip install uwsgi
