@@ -38,7 +38,7 @@ master=true
 py-autoreload = 1
 
 # 指定IP端口   
-#http=0.0.0.0:8000
+#http=0.0.0.0:8002
 
 
 #运行
@@ -52,13 +52,19 @@ http://192.168.187.131:8000/
 sudo apt install nginx-full
 
 #sudo nano /etc/nginx/sites-available/default
-       location / {
-                # First attempt to serve request as file, then
-                # as directory, then fall back to displaying a 404.
-                #try_files $uri $uri/ =404;
+#添加新的xxsite.conf
+server {
+        listen 80;
+        listen [::]:80;
+
+        server_name dg1.rrdaogou.com;
+
+
+        location / {
                 include uwsgi_params;
-                uwsgi_pass   127.0.0.1:3031;
+        uwsgi_pass   127.0.0.1:3031;
         }
+}
         
 # 重启Nginx
 sudo service nginx restart
