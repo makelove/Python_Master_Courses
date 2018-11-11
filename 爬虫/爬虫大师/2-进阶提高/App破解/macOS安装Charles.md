@@ -1,5 +1,8 @@
 ## macOS安装Charles
 
+- 参考
+    - https://www.jianshu.com/p/5539599c7a25
+
 - 视频：https://www.bilibili.com/video/av21238470/
 
 - 官网 https://www.charlesproxy.com/
@@ -25,4 +28,5 @@ https://addons.mozilla.org/zh-CN/firefox/addon/charles-proxy/
         - 浏览器Firefox 
     - iPhone
         - Configure your device to use Charles as its HTTP proxy on 192.168.0.159:8888, then browse to chls.pro/ssl to download and install the certificate.
+        - 注意：iOS系统，需要在 设置→通用→关于本机→证书信任设置 里面启用完全信任Charles证书
     - Android
