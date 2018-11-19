@@ -1,0 +1,27 @@
+## 模块打包并上传pypi分享
+
+- 参考
+    - [python 自定义安装包](https://blog.csdn.net/GiveMeFive_Y/article/details/79488008)
+        - 编写setup.py文件
+    - [创建自己的python模块，并使用pip install安装到python环境](https://blog.csdn.net/tlonline/article/details/79751658)
+    - [发布你自己的轮子 - PyPI打包上传实践](https://segmentfault.com/a/1190000008663126)
+        - 比较完整
+    - [Markdown Descriptions on PyPI](https://dustingram.com/articles/2018/03/16/markdown-descriptions-on-pypi)
+    - 官方文档 [How To Package Your Python Code](https://python-packaging.readthedocs.io/en/latest/index.html)
+    - [Python Packaging User Guide](https://packaging.python.org/)
+- 步骤
+    - pip install twine
+    - 注册你的包
+        - twine register dist/mypkg.whl
+        - 好像没用
+    - 修改版本号
+    - rm dist/*
+    - 打包
+        - python3 setup.py sdist bdist_wheel
+    - ls dist/
+    - 上传 
+        - twine upload dist/*
+    - 用户安装
+        - pip install package-name
+        - 更新后
+            - pip install package-name --upgrade
