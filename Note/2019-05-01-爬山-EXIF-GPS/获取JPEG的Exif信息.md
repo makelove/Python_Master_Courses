@@ -1,8 +1,13 @@
 # 图片EXIF
 
+- 视频教程: https://www.bilibili.com/video/av51517135/
+
 - 参考
     - https://feei.cn/exif
     - EXIF指可交换图片文件格式（Exchangeable Image file Format），可以在图片中记录数码相机的相关数据，比如拍摄的设备、拍摄的参数以及地理位置等。
+    - https://github.com/FeeiCN/EXIF
+    - https://github.com/ianare/exif-py
+        - https://github.com/ianare/exif-py/issues/66
 
 - pip install exifread
 
