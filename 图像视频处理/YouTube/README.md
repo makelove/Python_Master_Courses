@@ -1,10 +1,15 @@
 - 视频教程链接
-    - https://www.bilibili.com/video/av20879881/
-
+    - 旧 https://www.bilibili.com/video/av20879881/
+    - 新 https://www.bilibili.com/video/av53337435/
 - 参考
     - YouTube是一个视频网站，早期公司位于加利福尼亚州的圣布鲁诺。注册于2005年2月15日，由华裔美籍华人陈士骏等人创立在比萨店和日本餐馆，他可以让用户下载、观看及分享影片或短片。
 - 怎样翻墙？
     - 安装 蓝灯Lantern https://github.com/getlantern/forum
+        - 放弃
+    - 使用shadowsocks
+        - 复制终端代理命令
+        - export http_proxy=http://192.168.0.156:1087;export https_proxy=http://192.168.0.156:1087;
+        - 粘贴到终端Terminal
 
 - 安装
     - youtube-dl 是个命令行工具，可以下载YouTube.com及其他网站。
@@ -22,6 +27,61 @@
             - youtube-dl  -f 22 https://www.youtube.com/watch?v=7AFUch5JZaQ
         - 下载字幕
             - youtube-dl --write-auto-sub --sub-lang zh-Hans  https://www.youtube.com/watch?v=RJknrSi3eUQ
+            - 把字幕集成到视频里
+                - 问题:上传到B站,不支持,字幕不显示.在自己电脑上能显示
+            - youtube-dl --write-auto-sub --sub-lang zh-Hans --embed-subs -k  https://www.youtube.com/watch?v=WHjSSBgAc-s
+```
+(.py3) pro:Video play$ export http_proxy=http://192.168.0.156:1087;export https_proxy=http://192.168.0.156:1087;
+
+(.py3) pro:Video play$ youtube-dl --write-auto-sub --sub-lang zh-Hans  https://www.youtube.com/watch?v=RJknrSi3eUQ
+[youtube] RJknrSi3eUQ: Downloading webpage
+[youtube] RJknrSi3eUQ: Downloading video info webpage
+WARNING: unable to extract channel id; please report this issue on https://yt-dl.org/bug . Make sure you are using the latest version; see  https://yt-dl.org/update  on how to update. Be sure to call youtube-dl with the --verbose flag and include its complete output.
+[youtube] RJknrSi3eUQ: Looking for automatic captions
+[info] Writing video subtitles to: The Big Bang Theory Season 11 Promo (HD)-RJknrSi3eUQ.zh-Hans.vtt
+[download] Destination: The Big Bang Theory Season 11 Promo (HD)-RJknrSi3eUQ.f299.mp4
+[download] 100% of 16.96MiB in 00:15
+[download] Destination: The Big Bang Theory Season 11 Promo (HD)-RJknrSi3eUQ.f258.m4a
+[download] 100% of 1.39MiB in 00:05
+[ffmpeg] Merging formats into "The Big Bang Theory Season 11 Promo (HD)-RJknrSi3eUQ.mp4"
+Deleting original file The Big Bang Theory Season 11 Promo (HD)-RJknrSi3eUQ.f299.mp4 (pass -k to keep)
+Deleting original file The Big Bang Theory Season 11 Promo (HD)-RJknrSi3eUQ.f258.m4a (pass -k to keep)
+
+(.py3) pro:Video play$ ll The\ Big\ Bang\ Theory\ Season\ 11\ Promo\ \(HD\)-RJknrSi3eUQ.*
+-rw-r--r--  1 play  staff    18M Oct 13  2018 The Big Bang Theory Season 11 Promo (HD)-RJknrSi3eUQ.mp4
+-rw-r--r--  1 play  staff   1.0K May 23 13:47 The Big Bang Theory Season 11 Promo (HD)-RJknrSi3eUQ.zh-Hans.vtt
+```
+
+- 合并视频+字幕
+    - ffmpeg
+        - 在macOS上需要安装FFmpeg
+            - brew install ffmpeg
+        - 先将字幕转成ass格式
+            - ffmpeg -i The\ Big\ Bang\ Theory\ Season\ 11\ Promo\ \(HD\)-RJknrSi3eUQ.zh-Hans.vtt The\ Big\ Bang\ Theory\ Season\ 11\ Promo\ \(HD\)-RJknrSi3eUQ.zh-Hans.ass
+        - 合并
+            - ffmpeg  -i my.mkv  -vf subtitles=my.assmy2.mkv
+            - 比较耗资源!!!
+
+```bash
+(.py3) pro:~ play$ /usr/local/bin/ffmpeg
+ffmpeg version 4.1.3 Copyright (c) 2000-2019 the FFmpeg developers
+  built with Apple LLVM version 10.0.1 (clang-1001.0.46.4)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/4.1.3_1 --enable-shared --enable-pthreads --enable-version3 --enable-hardcoded-tables --enable-avresample --cc=clang --host-cflags='-I/Library/Java/JavaVirtualMachines/adoptopenjdk-11.0.2.jdk/Contents/Home/include -I/Library/Java/JavaVirtualMachines/adoptopenjdk-11.0.2.jdk/Contents/Home/include/darwin' --host-ldflags= --enable-ffplay --enable-gnutls --enable-gpl --enable-libaom --enable-libbluray --enable-libmp3lame --enable-libopus --enable-librubberband --enable-libsnappy --enable-libtesseract --enable-libtheora --enable-libvorbis --enable-libvpx --enable-libx264 --enable-libx265 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-librtmp --enable-libspeex --enable-videotoolbox --disable-libjack --disable-indev=jack --enable-libaom --enable-libsoxr
+  libavutil      56. 22.100 / 56. 22.100
+  libavcodec     58. 35.100 / 58. 35.100
+  libavformat    58. 20.100 / 58. 20.100
+  libavdevice    58.  5.100 / 58.  5.100
+  libavfilter     7. 40.101 /  7. 40.101
+  libavresample   4.  0.  0 /  4.  0.  0
+  libswscale      5.  3.100 /  5.  3.100
+  libswresample   3.  3.100 /  3.  3.100
+  libpostproc    55.  3.100 / 55.  3.100
+Hyper fast Audio and Video encoder
+usage: ffmpeg [options] [[infile options] -i infile]... {[outfile options] outfile}...
+
+Use -h to get full help or, even better, run 'man ffmpeg'
+```
+
 ```bash
 youtube-dl --help
 Usage: youtube-dl [OPTIONS] URL [URL...]
