@@ -1,7 +1,8 @@
 # Python_Master_Courses ( Python大师课程 ) 
 
-
+# 人生苦短，我用Python  
 - 基于Python3.6
+
 
     
 - 交流
@@ -18,3 +19,5 @@
 
 	 - 微信 打赏
    		  - <img src="data/wechat_donate.jpg" width = "200" height = "200" alt="wechat_donate"  />
+
+ 		  
