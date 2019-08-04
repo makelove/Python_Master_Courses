@@ -19,7 +19,8 @@ from urllib.request import urlretrieve
 import m3u8
 from random import randint
 from os import system
-import os 
+import os
+
 
 def main(url):
     m = m3u8.load(url)
@@ -27,7 +28,8 @@ def main(url):
     print('请输入序号，你想看哪个清晰度:')
     for i, pl in enumerate(m.playlists):
         print(f"{i}:{pl.stream_info.resolution}")
-    indexs: str = input('请输入序号，你想看哪个清晰度:')
+    indexs: str = input('请输入序号，你想看哪个清晰度(默认720p-2):')
+    indexs = '2' if indexs == '' else indexs
     if indexs.isnumeric():
         idx = int(indexs)
         pl = m.playlists[idx]
@@ -53,25 +55,25 @@ def main(url):
         print('合并文件完毕。。。')
 
         #
-        cmds=f'/Applications/IINA.app/Contents/MacOS/iina-cli '+fn
+        cmds = f'/Applications/IINA.app/Contents/MacOS/iina-cli ' + fn
         input(f'打开？{cmds}')  # TODO
         system(cmds)
 
     pass
 
-def merge_file():
-    l1=[int(f[:-3]) for f in os.listdir() if f.endswith('.ts')]
-    l1=sorted(l1)
 
-    fn = f"{randint(1000, 9999)}" 
+def merge_file():
+    l1 = [int(f[:-3]) for f in os.listdir() if f.endswith('.ts')]
+    l1 = sorted(l1)
+
+    fn = f"{randint(1000, 9999)}"
     fn = fn + '.mp4'
     with open(fn, 'wb') as f:
         for fp in l1:
-            print(fp,f"{fp}.ts")
+            print(fp, f"{fp}.ts")
             with open(f"{fp}.ts", 'rb') as g:
                 f.write(g.read())
-    print('合并文件完毕。。。')                
-
+    print('合并文件完毕。。。')
 
 
 def main2(url):
