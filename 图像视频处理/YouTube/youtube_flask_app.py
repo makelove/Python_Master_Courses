@@ -7,6 +7,8 @@ from googleapiclient.errors import HttpError
 DEVELOPER_KEY = 'xxx'
 YOUTUBE_API_SERVICE_NAME = 'youtube'
 YOUTUBE_API_VERSION = 'v3'
+youtube = build(YOUTUBE_API_SERVICE_NAME, YOUTUBE_API_VERSION,
+                    developerKey=DEVELOPER_KEY)
 #
 from flask import Flask, request
 
@@ -39,8 +41,7 @@ def hello_world():
 
 @app.route('/search', methods=['GET'])
 def youtube_search():
-    youtube = build(YOUTUBE_API_SERVICE_NAME, YOUTUBE_API_VERSION,
-                    developerKey=DEVELOPER_KEY)
+
     # print('request.args',request.args)
     keyword = request.args.get('keyword', "")
 
@@ -66,18 +67,22 @@ def youtube_search():
 
         video_url = 'https://www.youtube.com/watch?v=' + item['id'].get('videoId','')
         image_url = item['snippet']['thumbnails']['high']['url']#https://i.ytimg.com/vi/mdViOV3tsUo/hqdefault.jpg
-        rs=requests.get(image_url)
-        base64_data = base64.b64encode(rs.content)
+        try:
+            rs=requests.get(image_url)
+            base64_data = base64.b64encode(rs.content)
+            img_url='data:image/jpg;base64,'+base64_data.decode()
+        except:
+            img_url=image_url
 
         html += '''
             <li>
-                <div>
+                <div style="border:green solid 2px;">
                     <div>频道:'''+channelTitle+'''</div>
                     <div>标题:'''+title+'''</div>
                     <div>描述:'''+description+'''</div>
                     <div>发布时间:'''+publishedAt+'''</div>
                     <div><a href="'''+video_url+'''" target="_blank">
-                        <img src="data:image/jpg;base64,'''+base64_data.decode()+'''">
+                        <img src="'''+img_url+'''">
                     </a></div>
                 </div>
             </li>
