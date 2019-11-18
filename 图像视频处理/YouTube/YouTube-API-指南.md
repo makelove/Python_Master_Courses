@@ -1,3 +1,6 @@
+- 官方文档
+    - 文档 https://developers.google.com/youtube/v3/docs/
+
 - 演示 
 	- https://play4fun.pythonanywhere.com/
 
@@ -6,7 +9,7 @@
 	- https://www.slickremix.com/docs/get-api-key-for-youtube/
 
 
--YouTube API 例子 
+-YouTube API 官方例子 
 	- https://github.com/youtube/api-samples/tree/master/python
 
 - 安装
