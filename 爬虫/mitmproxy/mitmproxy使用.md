@@ -1,6 +1,9 @@
 - 官网
     - https://mitmproxy.org/
     - 文档 https://docs.mitmproxy.org/stable/
+    - 代码案例 https://github.com/mitmproxy/mitmproxy/tree/master/examples
+        - 安装到本地pip install mitmproxy[examples]
+        - 下载到本地 svn export https://github.com/mitmproxy/mitmproxy/trunk/examples/
 - 安装
     - brew install mitmproxy
     - pip install mitmproxy
@@ -12,9 +15,11 @@
     - 先执行 mitmweb
         - 自动打开浏览器 http://127.0.0.1:8081/#/flows
         - 用curl测试
+            - curl -x 127.0.0.1:8888  http://www.ip-api.com/json/
             - curl -x 127.0.0.1:8888 https://httpbin.org/ip
                 - 需要安装HTTPS证书
                 - curl -x 127.0.0.1:8888 -k https://httpbin.org/ip
+                - curl   -x 127.0.0.1:8888  --cacert ~/.mitmproxy/mitmproxy-ca-cert.cer   https://httpbin.org/ip
             - curl -x 127.0.0.1:8888 http://httpbin.org/ip
                 - 不需要
             - curl -x 127.0.0.1:8888 -k https://ip.cn

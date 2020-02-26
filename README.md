@@ -3,6 +3,7 @@
 # 人生苦短，我用Python  
 - 基于Python3.6
 
+## 暂停更新。最新笔记在[Programer_Log 我的程序员日志](https://github.com/makelove/Programer_Log)
 
     
 - 交流
