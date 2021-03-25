@@ -31,7 +31,7 @@ PyDispatcher==2.0.5
 pyOpenSSL==17.5.0
 PyQt5==5.10.1
 pytz==2018.3
-PyYAML==3.12
+PyYAML==5.4
 queuelib==1.5.0
 redis==2.10.6
 requests==2.18.4
