@@ -35,7 +35,7 @@ PyYAML==3.12
 queuelib==1.5.0
 redis==2.10.6
 requests==2.18.4
-Scrapy==1.5.0
+Scrapy==1.8.1
 scrapy-redis==0.6.8
 service-identity==17.0.0
 sip==4.19.8
