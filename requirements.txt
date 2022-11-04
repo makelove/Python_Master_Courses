@@ -40,7 +40,7 @@ scrapy-redis==0.6.8
 service-identity==17.0.0
 sip==4.19.8
 six==1.11.0
-Twisted==17.9.0
+Twisted==22.10.0
 urllib3==1.22
 w3lib==1.19.0
 Werkzeug==0.14.1
